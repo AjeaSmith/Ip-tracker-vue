@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { LMap, LMarker, LPopup, LTileLayer } from "@vue-leaflet/vue-leaflet";
 import { useAsyncState } from "@vueuse/core";
+import { Icon } from "leaflet";
 import { ref, watch } from "vue";
 
 const mapElement = ref("");
 const center = ref<[number, number]>([40.7506, -73.9972]);
+const locationIcon = new Icon({
+  iconUrl: "./images/icon-location.svg",
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
 
 const search = ref("");
 
@@ -85,7 +92,7 @@ watch(state, (newData) => {
         layer-type="base"
         name="OpenStreetMap"
       />
-      <LMarker :lat-lng="center">
+      <LMarker :lat-lng="center" :icon="locationIcon">
         <LPopup>You are here</LPopup>
       </LMarker>
     </LMap>
