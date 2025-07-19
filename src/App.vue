@@ -43,7 +43,7 @@ watch(state, (newData) => {
           Search for IP Address
         </label>
         <input v-model="search" type="text" placeholder="Search for any IP address or domain" name="ip-address">
-        <button type="submit">
+        <button type="submit" aria-label="Search">
           <img src="/images/icon-arrow.svg" alt="">
         </button>
       </form>
