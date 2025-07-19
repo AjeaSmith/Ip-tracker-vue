@@ -101,7 +101,7 @@ watch(state, (newData) => {
 
 <style>
 .main-bg {
-  background: url("./images/pattern-bg-mobile.png") no-repeat center;
+  background: url("/images/pattern-bg-mobile.png") no-repeat center;
   background-size: cover;
   height: 300px;
   width: 100%;
@@ -184,7 +184,7 @@ form {
 @media (min-width: 48rem) {
   .main-bg {
     height: 280px;
-    background: url("./images/pattern-bg-desktop.png") no-repeat center;
+    background: url("/images/pattern-bg-desktop.png") no-repeat center;
     background-size: cover;
   }
 }
